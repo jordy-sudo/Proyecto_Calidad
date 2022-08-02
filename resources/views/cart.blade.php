@@ -186,7 +186,7 @@
 
                     <br><a href="/" class="btn btn-dark">Continue en la tienda</a>
 
-                    <a href="/checkout" class="btn btn-success">Proceder al Checkout</a>
+                    <a href="/checkout"  onclick="javascript:contadorTotal()" class="btn btn-success">Proceder al Checkout</a>
 
                 </div>
 

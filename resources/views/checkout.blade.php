@@ -142,6 +142,13 @@
       </div>
     </div>
   </div>
+  <p class="timertext mt-4" 
+  style="font-size: 1.5rem;">
+  Tiempo empleado en la compra
+  <span class="secs"></span> seconds.
+</p>
+
+
 
 
 

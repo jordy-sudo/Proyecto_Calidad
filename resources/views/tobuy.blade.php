@@ -68,5 +68,54 @@
         <br/>
         </div>
       </div>
+
+      <div class="card">
+        <div class="card-header">
+          Numero de sesiones accedidas al pago
+        </div>
+        <div class="card-body">
+            <p class="card-text" id="TotalIdent" value=""><br></p>
+        <br/>
+        </div>
+      </div>
+
+      
+      <div class="card">
+        <div class="card-header">
+          Número de sesiones de diarias
+        </div>
+        <div class="card-body">
+            <p class="card-text" id="TotalNoTran" value=""><br></p>
+        <br/>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          Número de tiempo de transaccion
+        </div>
+        <div class="card-body">
+            <p class="card-text" id="timeTra" value=""><br></p>
+        <br/>
+        </div>
+      </div>
+       <!-- Tabla de sesiones -->
+
+       <table class="table table-dark mt-3">
+        <thead>
+          <tr>
+            <th scope="col">sesiones totales</th>
+            <th scope="col">sesiones abandonadas</th>
+            <th scope="col">errores</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><label type="text" id="totalesSeesion" value=""></label><br></td></th>
+            <td><label type="text" id="abandonos"></label><br></td>
+            <td><label type="text" id="Error"></label><br></td></td>
+          </tr>
+        </tbody>
+      </table>
 </div>
 @endsection

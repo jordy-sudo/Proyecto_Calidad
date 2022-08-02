@@ -17,6 +17,19 @@
 
       <div class="row featurette">
         <div class="col-md-7">
+          <ol class="breadcrumb">
+        
+            <select id="valor" class="form-select" aria-label="Default select example" onchange="CambioTexto()">
+                <option selected>Seleccionar tamaño de letra</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>30</option>
+                <option>35</option>
+                <option>40</option>
+            </select>      
+        </ol>
           <h2 class="featurette-heading">@lang('menssages.title')</h2>
           <p class="lead">@lang('menssages.contenido')</p>
         </div>
