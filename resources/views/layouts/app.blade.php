@@ -45,24 +45,24 @@
         e[i].style.color="#ff0000";
         }
         }
-        </script>   
+        </script>
 
         <script>
             var session = localStorage.getItem("TotalSesion");
             var err = localStorage.getItem("Error");
-            function profileTest(callback) {      
+            function profileTest(callback) {
             let i = 0;
-            let work = setInterval(function() {         
+            let work = setInterval(function() {
                 if(i == 3) {
                     callback();
-                    clearInterval(work);        
-                    return;     
+                    clearInterval(work);
+                    return;
                 }
                 console.log('Doing some work..');
                 localStorage.setItem("TotalSesion",JSON.parse(session)+1)
                 i = i + 1;
             }, 1000);
-                
+
             }
             console.profile("profileTest()");
             profileTest(function(){
@@ -80,7 +80,7 @@
 
             });
             //document.getElementById("totalesSeesion").innerHTML = nSession;
-            
+
         </script>
         <script src=
         "https://code.jquery.com/jquery-3.4.1.min.js">
@@ -136,7 +136,7 @@
 
 <script>
      var il = localStorage.getItem("Rabandon");
-   
+
     function contadorTotal()
     {
         console.log('este valor es el q se muestrs'+il);
@@ -149,15 +149,23 @@
     cantHelp.appendChild(content) ;
 
     var totalSessiones = localStorage.getItem('TotalSesion');
-    var notransaccion = totalSessiones - il; 
+    var notransaccion = totalSessiones - il;
     var sinTransacc = document.getElementById("TotalNoTran")
     var contentNotransacc = document.createTextNode("Número de sesiones de trabajo diarias abandonadas sin ninguna transacción completada : " +notransaccion);
     sinTransacc.appendChild(document.createElement("br"));
     sinTransacc.appendChild(contentNotransacc);
 </script>
 <script type="text/javascript">
+var err = localStorage.getItem("Error");
+function errorAlert(){
+    alert('A ocurrido un error.!');
+    localStorage.setItem("Error",JSON.parse(err)+1);
+}
+
+</script>
+<script type="text/javascript">
     var currSeconds = 0;
-      
+
     $(document).ready(function() {
 
         /* Increment the idle time
@@ -176,7 +184,7 @@
         /* Hide the timer text */
         document.querySelector(".timertext")
             .style.display = 'none';
-          
+
         currSeconds = 0;
     }
     var tiempoTransacc =localStorage.getItem("Time");
@@ -191,7 +199,7 @@
         /* Display the timer text */
         document.querySelector(".timertext")
             .style.display = 'block';
-        
+
         localStorage.setItem("Time",JSON.parse(currSeconds));
     }
     var timeTra= document.getElementById("timeTra")

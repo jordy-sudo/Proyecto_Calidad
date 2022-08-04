@@ -17,11 +17,18 @@ class CartController extends Controller
     public function indexAbout(){
         return view('about');
     }
+    public function dateQuery(Request $request){
+        $inicio =$request->input('started_at');
+        $fin = $request->input('started_fin');
+        $posts = Order::whereBetween('created_at', [$inicio, $fin])->get();
+        //dd($inicio,$fin,$posts);
+       return view('tobuy',['filtrados'=>$posts,'orders'=>$posts,'sucess'=>$posts]);
+    }
     public function indexBuy(){
         $pedidos = Order::where('status','=',0)->get();
         $pedidosSuccess= Order::where('status','=',1)->get();
         //dd($pedidosSuccess);
-        return view('tobuy',['orders'=>$pedidos,'sucess'=>$pedidosSuccess]);
+        return view('tobuy',['orders'=>$pedidos,'sucess'=>$pedidosSuccess, 'filtrados'=>$pedidos]);
     }
 
     public function shop()

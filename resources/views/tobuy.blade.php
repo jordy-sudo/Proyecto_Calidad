@@ -13,6 +13,7 @@
             <th scope="col">Estado</th>
           </tr>
         </thead>
+
     @foreach ( $orders as $order)
         <tbody>
           <tr>
@@ -79,7 +80,7 @@
         </div>
       </div>
 
-      
+
       <div class="card">
         <div class="card-header">
           Número de sesiones de diarias
@@ -105,7 +106,7 @@
         <thead>
           <tr>
             <th scope="col">sesiones totales</th>
-            <th scope="col">sesiones abandonadas</th>
+
             <th scope="col">errores</th>
           </tr>
         </thead>
@@ -117,5 +118,46 @@
           </tr>
         </tbody>
       </table>
+      <form action="{{ route('date') }}" method="POST">
+        @csrf
+        <div class="form-group">
+            <label for="" class="started_At">
+                Fecha inicial
+            </label>
+            <input type="date" id="started_at" name="started_at" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="" class="started_At">
+                Fecha final
+            </label>
+            <input type="date" id="started_fin" name="started_fin" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success" >Consultar</button>
+      </form>
+      <hr>
+      <table class="table mt-5 table-striped">
+        <p class="mt-5">Pedidos completados</p>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+    @foreach ( $filtrados as $order)
+        <tbody>
+          <tr>
+            <th scope="row">{{ $order->id }}</th>
+            <td>{{ $order->fname }}</td>
+            <td>{{ $order->address1 }}</td>
+            <td>{{ $order->pincode }}</td>
+            <td>{{ $order->status }}</td>
+          </tr>
+        </tbody>
+        @endforeach
+      </table>
+      <hr>
 </div>
 @endsection

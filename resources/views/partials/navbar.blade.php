@@ -18,23 +18,23 @@
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">Sobre Nostros</a>
+                    <a class="nav-link" onclick="javascript:errorAlert()" href="{{ route('about') }}">@lang('menssages.sobreNosotros')</a>
                 </li>
 
                 <li class="nav-item">
 
-                    <a class="nav-link" href="{{ route('shop') }}">TIENDA</a>
+                    <a class="nav-link" href="{{ route('shop') }}">@lang('menssages.Tienda')</a>
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('tobuy') }}">Pedidos</a>
+                    <a class="nav-link" href="{{ route('tobuy') }}">@lang('menssages.Pedidos')</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" type="button" href="https://api.whatsapp.com/send?phone=5930984581915&text=Hola"  id="boton" onclick="javascript:contador()">chatbot</a>
-                </li> 
+                    <a class="nav-link" type="button" href="https://api.whatsapp.com/send?phone=5930984581915&text=Hola"  id="boton" onclick="javascript:contador()">@lang('menssages.chatBot')</a>
+                </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cambio de idioma</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">@lang('menssages.cambioIdioma')</a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="{{ url('/es') }}">Español</a>
                       <a class="dropdown-item" href="{{ url('/en') }}">Ingles</a>
